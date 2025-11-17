@@ -272,6 +272,8 @@ server <- function(input, output, session) {
   })
 }
 
-# Run the application
-shinyApp(ui = ui, server = server)
+# Run the application on Render-compatible host/port
+app <- shinyApp(ui = ui, server = server)
 
+port <- as.numeric(Sys.getenv("PORT", "8080"))  # Render will set PORT
+shiny::runApp(app, host = "0.0.0.0", port = port)

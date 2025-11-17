@@ -284,10 +284,7 @@ find_cheapest_flight_city_4 <-function(country_origin="Canada", city_origin="Mon
     destination_sequence <- destination_sequence[-length(destination_sequence)]
   }
   
-  min_price
-  min_destination_sequence
-  min_price_list
-  min_itinerary_list
+  return (list(min_price = min_price, min_destination_sequence = min_destination_sequence, min_price_list = min_price_list, min_itinerary_list = min_itinerary_list))
 }
 
 find_cheapest_flight_city_3 <-function(country_origin="Canada", city_origin="Montreal", city_destination="Milan", time_frame=30){
@@ -524,8 +521,5 @@ find_cheapest_flight_city_3 <-function(country_origin="Canada", city_origin="Mon
     destination_sequence <- destination_sequence[-length(destination_sequence)]
   }
   
-  min_price
-  min_destination_sequence
-  min_price_list
-  min_itinerary_list
+  return (list(min_price = min_price, min_destination_sequence = min_destination_sequence, min_price_list = min_price_list, min_itinerary_list = min_itinerary_list))
 }

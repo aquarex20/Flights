@@ -23,8 +23,6 @@ find_cheapest_flight_city_4 <-function(country_origin="Canada", city_origin="Mon
     stop("Could not find", city_destination," location")
   }
   
-  nrow(flights$itineraries$price)
-  
   further_away_than_before <- function(itins1, itins2, i1, i2) {
     # previous origin
     origin <- list(
@@ -307,8 +305,6 @@ find_cheapest_flight_city_3 <-function(country_origin="Canada", city_origin="Mon
   } else {
     stop("Could not find", city_destination," location")
   }
-  
-  nrow(flights$itineraries$price)
   
   further_away_than_before <- function(itins1, itins2, i1, i2) {
     # previous origin
